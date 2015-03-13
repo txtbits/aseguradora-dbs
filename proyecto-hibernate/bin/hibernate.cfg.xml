@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+<!--         <property name="hibernate.bytecode.use_reflection_optimizer">false</property> -->
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.password">proyecto</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+        <property name="hibernate.connection.username">proyecto</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+<!--         <property name="current_session_context_class">thread</property> -->
+<!--    <mapping resource="pojo/Medico.hbm.xml" /> -->
+<!--    <mapping resource="pojo/Hospital.hbm.xml" /> -->
+		<mapping class="pojo.Medico" />
+		<mapping class="pojo.Hospital" />
+		<mapping class="pojo.PolizasAsegurados" />
+<!--         <property name="hibernate.search.autoregister_listeners">false</property> -->
+    </session-factory>
+</hibernate-configuration>
